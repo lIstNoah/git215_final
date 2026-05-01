@@ -1,0 +1,347 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End Of CSS Reset */
+
+/* My CSS */
+
+/*
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.amarna-regular {
+  font-family: "Amarna", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+:root {
+    --fonts1: "PT Serif", serif, "cursive";
+    --fonts2: "Amarna", sans-serif, "cursive";
+    --cyan-gradient: linear-gradient(to bottom, #6fdcff, #95f6ff, #ffffff);
+    --lt-blue: #49a4ff;
+    --dk-blue: #050049;
+    --white: #ffffff;
+}
+
+* {
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cyan-gradient);
+    margin: 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--dk-blue);
+    width: 100%;
+    padding-top: 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 28px 0; 
+}
+
+header h1 a {
+    font-family: var(--fonts1);
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    gap: 64px;
+    list-style: none;
+}
+
+nav a {
+    font-family: var(--fonts2);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--lt-blue);
+    outline: none;
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--white);
+    font-weight: bold;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Home Page */ 
+
+.home-page main {
+    color: var(--dk-blue);
+}
+
+.home-page main .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem; 
+    margin-bottom: 4rem;
+}
+
+.home-page main h2 {
+    font-family: var(--fonts1);
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5rem auto 0;
+}
+
+.home-page main > .container > p {
+    font-family: var(--fonts2);
+    font-size: 16px;
+    text-align: center;
+    margin: -20px auto 20px;
+    max-width: 600px;
+    padding: 0 20px 20px; 
+}
+
+section {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem;
+}
+
+section img {
+    width: 50%;
+    height: auto;
+}
+
+.section-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section h3 {
+    font-family: var(--fonts1);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    font-family: var(--fonts2);
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 36px; 
+}
+
+/* Contact Page */
+
+.contact-page main .container {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;
+    gap: 40px; 
+    margin: 5rem auto;
+    max-width: 900px;
+}
+
+.contact-page section {
+    width: 350px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page h2, .contact-page section p {
+    width: 350px;      
+    text-align: left;   
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.contact-page h2 {
+    font-family: var(--fonts1);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contact-page section p {
+    font-family: var(--fonts2);
+    font-size: 16px;
+    margin-bottom: 2rem;
+    padding: 0;         
+}
+
+.contact-page section img {
+    width: 350px;
+    height: auto;
+    display: block;
+}
+
+.required {
+    color: #ff4d4d;
+}
+.contact-page form {
+    display: flex;
+    flex: 0 1 400px; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-page fieldset {
+    border: 1px solid var(--dk-blue);
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-page legend {
+    font-weight: bold;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    width: 100%; 
+}
+
+.contact-page fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    font-weight: normal; 
+}
+
+.contact-page input[type="radio"] {
+    margin: 0;
+    width: auto; 
+}
+
+.contact-page input[type="submit"] {
+    background: var(--dk-blue);
+    font-family: var(--fonts1);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-page input, .contact-page textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.contact-page input:focus, 
+.contact-page textarea:focus {
+    outline: none; 
+    border: 2px solid var(--lt-blue);
+    background-color: #faffff;
+}
+
+.contact-page input:required:invalid {
+    border: solid #ff4d4d; 
+}
+
+.contact-page input[type="submit"]:hover,
+.contact-page input[type="submit"]:focus {
+    background-color: var(--lt-blue);
+    color: var(--dk-blue);
+    border: 2px solid var(--dk-blue);
+}
+
+footer {
+    background-color: var(--dk-blue);
+    width: 100%;
+    margin-top: 100px; 
+    padding: 40px 0; 
+    color: var(--white);
+    text-align: center;
+}
+
+footer p {
+    font-family: var(--fonts2);
+    font-size: 1rem;
+    margin: 10px 0; 
+}
